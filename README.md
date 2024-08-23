@@ -75,4 +75,3 @@ In this project, the tools and technical solutions used are:
    - **Padding Mask**: Prevents the model from attending to padding tokens.
    - **Look-Ahead Mask**: Ensures that the decoder does not attend to future tokens during training.
 
-These tools and solutions work together to build a machine translation model capable of translating text between English and Spanish using advanced neural network techniques.
