@@ -45,3 +45,34 @@ This project implements a Transformer model based on the "Attention Is All You N
   - Implement methods to create padding and look-ahead masks to manage sequence lengths and prevent future token peeking during training.
 
 This setup provides a robust framework for machine translation, leveraging the Transformer architecture to handle sequential data effectively.
+
+In this project, the tools and technical solutions used are:
+
+### Tools
+1. **Python**: Programming language used for implementing the project.
+2. **TensorFlow**: Open-source deep learning framework for building and training the Transformer model.
+3. **TensorFlow Datasets (TFDS)**: Library used to handle and preprocess text data.
+4. **NumPy**: Library for numerical operations and array manipulations.
+5. **Jupyter Notebook**: Development environment for writing and executing Python code.
+
+### Technical Solutions
+1. **Transformer Architecture**:
+   - **Positional Encoding**: Adds positional information to input embeddings to capture the order of tokens.
+   - **Multi-Head Attention**: Allows the model to focus on different parts of the input sequence simultaneously.
+   - **Scaled Dot-Product Attention**: Computes attention scores by scaling dot products of queries and keys.
+   - **Encoder-Decoder Structure**: Uses an encoder to process the input sequence and a decoder to generate the output sequence.
+
+2. **Data Preprocessing**:
+   - **Text Tokenization**: Converts words into numerical tokens using `SubwordTextEncoder` to handle vocabulary and improve model performance.
+   - **Data Cleaning**: Removes unnecessary characters, handles non-breaking prefixes, and tokenizes the text.
+   - **Padding and Truncation**: Ensures all sequences have the same length for batch processing.
+
+3. **Model Training**:
+   - **Dataset Preparation**: Uses TensorFlow's `tf.data.Dataset` for efficient batching, shuffling, and prefetching of data.
+   - **Training Configuration**: Implements training with dropout for regularization and masks to handle padding and future tokens.
+
+4. **Masking**:
+   - **Padding Mask**: Prevents the model from attending to padding tokens.
+   - **Look-Ahead Mask**: Ensures that the decoder does not attend to future tokens during training.
+
+These tools and solutions work together to build a machine translation model capable of translating text between English and Spanish using advanced neural network techniques.
